@@ -95,7 +95,7 @@ void writefile (unsigned char outbuf[], int blen)
    fclose(fo);
 }
 
-Int main( int argc, char *argv[] )
+int main( int argc, char *argv[] )
 {
    int s, x, oct_ptr,tt;
    struct ifreq buffer;

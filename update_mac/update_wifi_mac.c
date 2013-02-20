@@ -172,7 +172,13 @@ int main( int argc, char *argv[] )
 
    // Write out NVS file
 
-    writefile (fdbuf,buflen);
+  writefile (fdbuf,buflen);
+  
+  // Bounce wl12xx_sdio to get the change instantianted
+
+  char *args[] = {"/system/bin/rmmod", "wl12xx_sdio", (char *) 0 };
+  execv("/system/bin/rmmod", args);
+
 
  return EXIT_SUCCESS;
 }
